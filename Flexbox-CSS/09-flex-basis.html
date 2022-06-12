@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos Flex Basis</title>
+
+        <style>
+                .flex-container {
+                        display: flex;
+                        max-width: 300px;
+                        border: 1px solid red;
+                }
+                .item {
+                        background-color: black;
+                        margin: 5px;
+                        text-align: center;
+                        color: aliceblue;
+                }
+                .bauto{
+                        flex-basis: auto;
+                }
+                .bzero{
+                        flex-basis: 0;
+                }
+                .fg-1{
+                        flex-grow: 1;
+                }
+                .fg-2{
+                        flex-grow: 2;
+                }
+        </style>
+</head>
+<body>
+        <p>basis auto</p>
+        <div class="flex-container">
+                <div class="item bauto fg-1">A</div>
+                <div class="item bauto fg-1">EEE</div>
+                <div class="item bauto fg-1">I</div>
+                <div class="item bauto fg-2">OOOOOO</div>
+        </div>
+        <p>basis em 0</p>
+        <div class="flex-container">
+                <div class="item bzero fg-1">AAAAAAAAAAAAA</div>
+                <div class="item bzero fg-1">EEE</div>
+                <div class="item bzero fg-1">I</div>
+                <div class="item bzero fg-2">OOOOOO</div>
+        </div>
+        <p>basis mais width definido</p>
+        <div class="flex-container">
+                <div class="item bzero fg-1">A</div>
+                <div class="item bzero fg-1">EEE</div>
+                <div class="item bzero fg-1">I</div>
+                <div class="item bzero fg-2">OOOOOO</div>
+        </div>
+</body>
+</html>
